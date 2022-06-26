@@ -6,11 +6,13 @@ services:
     volumes:
       - ./web:/var/www/app
     ports:
-      - ${PORT}:3000
+      - ${WEB_APP_PORT}:3000
+    depends_on:
+      - db
   db:
     container_name: db
     build: ./db
     ports:
-      - 5432:5432
+      - ${DB_PORT}:5432
     environment:
       POSTGRES_HOST_AUTH_METHOD: "trust"
