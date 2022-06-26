@@ -1,0 +1,14 @@
+{
+    "name": "app",
+    "version": "1.0.0",
+    "description": "tmp",
+    "main": "index.js",
+    "scripts": {
+    },
+    "author": "ilya-skoropad",
+    "license": "MIT",
+    "readmeFilename": "README.md",
+    "dependencies": {
+    }
+  }
+  

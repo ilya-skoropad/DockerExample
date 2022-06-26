@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  web:
+    container_name: web
+    build: ./web
+    volumes:
+      - ./web:/var/www/app
+    ports:
+      - ${PORT}:3000
+  db:
+    container_name: db
+    build: ./db
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: "trust"
